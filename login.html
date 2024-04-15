@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="">
+        <input type="text" placeholder="Usuário" id="usuario" required>
+        <input type="password" placeholder="Senha" id="senha" required>
+        <button id="login">Login</button>
+    </form>
+
+    <script>      
+
+
+        let db = { 
+            usuario: 'admin',
+            senha: 'admin'
+        }     
+        
+        let form = document.querySelector('form');
+        let usuario = document.getElementById('usuario');
+        let senha = document.getElementById('senha');
+        
+        if(usuario.value === db.usuario && senha.value === db.senha){
+            alert('Login efetuado com sucesso');
+        } else {
+            alert('Usuário ou senha inválidos');
+        }
+
+        
+    </script>
+</body>
+</html>
